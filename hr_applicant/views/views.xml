@@ -17,9 +17,41 @@
             <field name="responsible" position="after">
                 <field name="interviewer"/>
             </field>
-            <group name="invis-2" position="attributes">
-                <attribute name="invisible">1</attribute>
-            </group>
+            <xpath expr="//label[@for='salary_expected']/parent::group" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr='//sheet' position='inside'>
+                <notebook>
+                    <page string="Personal Information">
+                        <group>
+                            <field name="applicant_gender"/>
+                            <field name="nationality"/>
+                            <field name="birth_date"/>
+                            <field name="address"/>
+                            <field name="citizenship"/>
+                            <field name="is_single"/>
+                        </group>
+                    </page>
+                    <page string="Work Experience">
+                        <group>
+                            <field name="workplace"/>
+                            <field name="workp_experience"/>
+                            <field name="job_position"/>
+                            <field name="work_start_date"/>
+                            <field name="work_desc"/>
+                        </group>
+                    </page>
+                    <page string="Education">
+                        <group>
+                            <field name="study_place"/>
+                            <field name="specialty"/>
+                            <field name="admission_date"/>
+                            <field name="graduation_date"/>
+                        </group>
+                    </page>
+                </notebook>
+            </xpath>
+            
         </field>
     </record>
   </data>
