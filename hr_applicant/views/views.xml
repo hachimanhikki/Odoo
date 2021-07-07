@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+    <record id="hr_recruitment_inherited" model="ir.ui.view">
+        <field name="name">hr_recruitment.inherited</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+            <field name="type_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="user_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="user_id" position="after">
+                <field name="responsible"/>
+            </field>
+            <field name="responsible" position="after">
+                <field name="interviewer"/>
+            </field>
+            <group name="invis-2" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </group>
+        </field>
+    </record>
+  </data>
+</odoo>
